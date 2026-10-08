@@ -1,0 +1,67 @@
+{
+  "uid": "enrich_with_looot",
+  "type": "workflow-action",
+  "config": {
+    "actionUrl": "https://YOUR-BACKEND.example.com/workflow/enrich",
+    "isPublished": false,
+    "supportedClients": [{ "client": "WORKFLOWS" }],
+    "objectTypes": ["CONTACT", "COMPANY"],
+    "inputFields": [
+      {
+        "typeDefinition": {
+          "name": "lookup",
+          "type": "enumeration",
+          "fieldType": "select",
+          "options": [
+            { "value": "find_work_email", "label": "Find work email" },
+            { "value": "verify_email", "label": "Verify email" },
+            { "value": "enrich_company", "label": "Enrich company" }
+          ]
+        },
+        "supportedValueTypes": ["STATIC_VALUE"],
+        "isRequired": true
+      }
+    ],
+    "outputFields": [
+      { "typeDefinition": { "name": "email", "type": "string", "fieldType": "text" } },
+      { "typeDefinition": { "name": "emailStatus", "type": "string", "fieldType": "text" } },
+      { "typeDefinition": { "name": "deliverable", "type": "string", "fieldType": "text" } },
+      { "typeDefinition": { "name": "industry", "type": "string", "fieldType": "text" } },
+      { "typeDefinition": { "name": "size", "type": "string", "fieldType": "text" } },
+      { "typeDefinition": { "name": "costUsd", "type": "number", "fieldType": "number" } },
+      { "typeDefinition": { "name": "provider", "type": "string", "fieldType": "text" } },
+      { "typeDefinition": { "name": "runId", "type": "string", "fieldType": "text" } },
+      { "typeDefinition": { "name": "message", "type": "string", "fieldType": "text" } }
+    ],
+    "labels": {
+      "en": {
+        "actionName": "Enrich with looot",
+        "appDisplayName": "looot",
+        "actionDescription": "Runs one looot lookup on the enrolled record. It fills empty fields only and costs the real price of the lookup, shown in the costUsd output.",
+        "actionCardContent": "Enrich with looot: {{lookup}}",
+        "inputFieldLabels": { "lookup": "Lookup" },
+        "inputFieldDescriptions": {
+          "lookup": "Find work email and Verify email run on contacts. Enrich company runs on companies, or on the company of a contact."
+        },
+        "inputFieldOptionLabels": {
+          "lookup": {
+            "find_work_email": "Find work email",
+            "verify_email": "Verify email",
+            "enrich_company": "Enrich company"
+          }
+        },
+        "outputFieldLabels": {
+          "email": "Email",
+          "emailStatus": "Email status",
+          "deliverable": "Deliverable (true or false)",
+          "industry": "Industry",
+          "size": "Company size",
+          "costUsd": "Cost in USD",
+          "provider": "Provider",
+          "runId": "looot run ID",
+          "message": "Message"
+        }
+      }
+    }
+  }
+}

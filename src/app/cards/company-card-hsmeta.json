@@ -1,0 +1,11 @@
+{
+  "uid": "looot_company_card",
+  "type": "card",
+  "config": {
+    "name": "looot",
+    "description": "Fill the industry and size of this company. Shows the price before it calls looot.",
+    "entrypoint": "/app/cards/CompanyCard.tsx",
+    "location": "crm.record.tab",
+    "objectTypes": ["COMPANY"]
+  }
+}

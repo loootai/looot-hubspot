@@ -1,0 +1,49 @@
+{
+  "name": "looot-hubspot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HubSpot app for looot: find a work email, verify an email and enrich a company from a contact or company record, and as a workflow action.",
+  "license": "MIT",
+  "homepage": "https://looot.ai",
+  "author": {
+    "name": "looot",
+    "url": "https://looot.ai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loootai/looot-hubspot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/loootai/looot-hubspot/issues"
+  },
+  "keywords": [
+    "hubspot",
+    "looot",
+    "enrichment",
+    "email-finder",
+    "email-verification",
+    "company-enrichment"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/backend/src/index.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.cards.json",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@hubspot/ui-extensions": "0.17.0",
+    "@types/node": "24.19.0",
+    "@types/react": "18.3.31",
+    "eslint": "9.39.5",
+    "react": "18.3.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.1",
+    "vitest": "4.1.11"
+  }
+}

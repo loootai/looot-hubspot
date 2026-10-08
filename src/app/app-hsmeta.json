@@ -1,0 +1,31 @@
+{
+  "uid": "looot_hubspot_app",
+  "type": "app",
+  "config": {
+    "description": "Find a work email, verify an email and enrich a company from a contact or company record, or from a workflow. Each lookup runs on your own looot account, shows its price first and charges only the real cost.",
+    "name": "looot",
+    "distribution": "marketplace",
+    "auth": {
+      "type": "oauth",
+      "redirectUrls": ["https://YOUR-BACKEND.example.com/oauth/callback"],
+      "requiredScopes": [
+        "crm.objects.contacts.read",
+        "crm.objects.contacts.write",
+        "crm.objects.companies.read",
+        "crm.objects.companies.write"
+      ],
+      "optionalScopes": ["crm.schemas.contacts.write", "crm.schemas.companies.write"],
+      "conditionallyRequiredScopes": []
+    },
+    "permittedUrls": {
+      "fetch": ["https://YOUR-BACKEND.example.com"],
+      "iframe": [],
+      "img": []
+    },
+    "support": {
+      "supportEmail": "support@looot.ai",
+      "documentationUrl": "https://docs.looot.ai",
+      "supportUrl": "https://looot.ai"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "uid": "looot_contact_card",
+  "type": "card",
+  "config": {
+    "name": "looot",
+    "description": "Find a work email or verify the email on this contact. Shows the price before it calls looot.",
+    "entrypoint": "/app/cards/ContactCard.tsx",
+    "location": "crm.record.tab",
+    "objectTypes": ["CONTACT"]
+  }
+}

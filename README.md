@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/github/license/loootai/looot-hubspot)](LICENSE) [![Docs](https://img.shields.io/badge/docs-docs.looot.ai-12A06A)](https://docs.looot.ai)
 
 A [HubSpot](https://www.hubspot.com) public app for [looot](https://looot.ai). looot gives a workspace one key and
-one prepaid balance for 2,500+ data endpoints from 90+ providers. This app uses three of its jobs to fill gaps
+one prepaid balance for 4,200+ data endpoints from 300+ providers. This app uses three of its jobs to fill gaps
 in contact and company records, from a card on the record or from a workflow.
 
 Status: source only. Not installed on a live HubSpot account. It typechecks, lints and passes 81 unit tests, but it
